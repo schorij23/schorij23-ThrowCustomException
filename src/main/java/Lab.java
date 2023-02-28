@@ -1,3 +1,4 @@
+import kotlin.jvm.Throws;
 
 public class Lab {
 
@@ -14,9 +15,13 @@ public class Lab {
      * This also means that you should NOT write a try/catch block in this method, as the tests are expecting to have
      * a method thrown to it. A try/catch block would handle the exception within the method. The tests, on the other
      * hand, are using a try/catch block to catch the exception thrown by this method.
+     * @throws CustomException
      */
-    public void throwCustomException(){
+    public void throwCustomException() throws CustomException{
+        throw new CustomException("FileNotFound");
 
     }
 
-}
+    }
+
+
